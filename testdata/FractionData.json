@@ -1,0 +1,193 @@
+[
+{
+ 	"fraction":"0.1",
+	"month":"JAN",
+    "meterData":
+	{
+  	"meterId":"002"
+	} 
+},
+{
+ 	"fraction":"0.1",
+	"month":"FEB",
+    "meterData":
+	{
+  	"meterId":"002"
+	} 
+},
+{
+ 	"fraction":"0.1",
+	"month":"MAR",
+    "meterData":
+	{
+  	"meterId":"002"
+	} 
+},
+{
+ 	"fraction":"0.1",
+	"month":"APR",
+    "meterData":
+	{
+  	"meterId":"002"
+	} 
+},
+{
+ 	"fraction":"0.1",
+	"month":"MAY",
+    "meterData":
+	{
+  	"meterId":"002"
+	} 
+},
+{
+ 	"fraction":"0.1",
+	"month":"JUN",
+    "meterData":
+	{
+  	"meterId":"002"
+	} 
+},
+{
+ 	"fraction":"0.1",
+	"month":"JUL",
+    "meterData":
+	{
+  	"meterId":"002"
+	} 
+},
+{
+ 	"fraction":"0.1",
+	"month":"AUG",
+    "meterData":
+	{
+  	"meterId":"002"
+	} 
+},
+{
+ 	"fraction":"0.05",
+	"month":"SEP",
+    "meterData":
+	{
+  	"meterId":"002"
+	} 
+},
+{
+ 	"fraction":"0.05",
+	"month":"OCT",
+    "meterData":
+	{
+  	"meterId":"002"
+	} 
+},
+{
+ 	"fraction":"0.05",
+	"month":"NOV",
+    "meterData":
+	{
+  	"meterId":"002"
+	} 
+},
+{
+ 	"fraction":"0.05",
+	"month":"DEC",
+    "meterData":
+	{
+  	"meterId":"002"
+	} 
+},{
+ 	"fraction":"0.1",
+	"month":"JAN",
+    "meterData":
+	{
+  	"meterId":"001"
+	} 
+},
+{
+ 	"fraction":"0.1",
+	"month":"FEB",
+    "meterData":
+	{
+  	"meterId":"001"
+	} 
+},
+{
+ 	"fraction":"0.1",
+	"month":"MAR",
+    "meterData":
+	{
+  	"meterId":"001"
+	} 
+},
+{
+ 	"fraction":"0.1",
+	"month":"APR",
+    "meterData":
+	{
+  	"meterId":"001"
+	} 
+},
+{
+ 	"fraction":"0.1",
+	"month":"MAY",
+    "meterData":
+	{
+  	"meterId":"001"
+	} 
+},
+{
+ 	"fraction":"0.1",
+	"month":"JUN",
+    "meterData":
+	{
+  	"meterId":"001"
+	} 
+},
+{
+ 	"fraction":"0.1",
+	"month":"JUL",
+    "meterData":
+	{
+  	"meterId":"001"
+	} 
+},
+{
+ 	"fraction":"0.1",
+	"month":"AUG",
+    "meterData":
+	{
+  	"meterId":"001"
+	} 
+},
+{
+ 	"fraction":"0.05",
+	"month":"SEP",
+    "meterData":
+	{
+  	"meterId":"001"
+	} 
+},
+{
+ 	"fraction":"0.05",
+	"month":"OCT",
+    "meterData":
+	{
+  	"meterId":"001"
+	} 
+},
+{
+ 	"fraction":"0.05",
+	"month":"NOV",
+    "meterData":
+	{
+  	"meterId":"001"
+	} 
+},
+{
+ 	"fraction":"0.05",
+	"month":"DEC",
+    "meterData":
+	{
+  	"meterId":"001"
+	} 
+}
+]

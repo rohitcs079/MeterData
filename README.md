@@ -27,7 +27,8 @@ POST http://localhost:8090/api/meterreading/createMeterReading
 
 #Assumptions
  For a Profile  12 months data will be loaded otherwise it wont process
- Meter and Profile Data will be inserted before processing Fraction and Meter Readings
+ Meter and Profile Data will be inserted before processing Fraction and Meter Readings.
+ data.sql file will load initial Meter and Profile in Table. There is a rest endpont to create MeterData
  
  #TODO:
    Although Rest end points for all the CRUD operation has been implemented. Below are the TODO List

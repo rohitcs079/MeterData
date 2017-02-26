@@ -1,0 +1,195 @@
+
+[{
+ 	"month":"JAN",
+	"meterData":
+	{
+  	"meterId":"001"
+	},
+	"reading":"20"
+},
+{
+ 	"month":"FEB",
+	"meterData":
+	{
+  	"meterId":"001"
+	},
+	"reading":"20"
+},
+{
+ 	"month":"MAR",
+	"meterData":
+	{
+  	"meterId":"001"
+	},
+	"reading":"20"
+},
+{
+ 	"month":"APR",
+	"meterData":
+	{
+  	"meterId":"001"
+	},
+	"reading":"20"
+},
+{
+ 	"month":"MAY",
+	"meterData":
+	{
+  	"meterId":"001"
+	},
+	"reading":"20"
+},
+{
+ 	"month":"JUN",
+	"meterData":
+	{
+  	"meterId":"001"
+	},
+	"reading":"20"
+},
+{
+ 	"month":"JUL",
+	"meterData":
+	{
+  	"meterId":"001"
+	},
+	"reading":"20"
+},
+{
+ 	"month":"AUG",
+	"meterData":
+	{
+  	"meterId":"001"
+	},
+	"reading":"20"
+},
+{
+ 	"month":"SEP",
+	"meterData":
+	{
+  	"meterId":"001"
+	},
+	"reading":"20"
+},
+{
+ 	"month":"OCT",
+	"meterData":
+	{
+  	"meterId":"001"
+	},
+	"reading":"20"
+},
+{
+ 	"month":"NOV",
+	"meterData":
+	{
+  	"meterId":"001"
+	},
+	"reading":"20"
+},
+{
+ 	"month":"DEC",
+	"meterData":
+	{
+  	"meterId":"001"
+	},
+	"reading":"20"
+},
+{
+ 	"month":"JAN",
+	"meterData":
+	{
+  	"meterId":"002"
+	},
+	"reading":"20"
+},
+{
+ 	"month":"FEB",
+	"meterData":
+	{
+  	"meterId":"002"
+	},
+	"reading":"20"
+},
+{
+ 	"month":"MAR",
+	"meterData":
+	{
+  	"meterId":"002"
+	},
+	"reading":"20"
+},
+{
+ 	"month":"APR",
+	"meterData":
+	{
+  	"meterId":"002"
+	},
+	"reading":"20"
+},
+{
+ 	"month":"MAY",
+	"meterData":
+	{
+  	"meterId":"002"
+	},
+	"reading":"20"
+},
+{
+ 	"month":"JUN",
+	"meterData":
+	{
+  	"meterId":"002"
+	},
+	"reading":"20"
+},
+{
+ 	"month":"JUL",
+	"meterData":
+	{
+  	"meterId":"002"
+	},
+	"reading":"20"
+},
+{
+ 	"month":"AUG",
+	"meterData":
+	{
+  	"meterId":"002"
+	},
+	"reading":"20"
+},
+{
+ 	"month":"SEP",
+	"meterData":
+	{
+  	"meterId":"002"
+	},
+	"reading":"20"
+},
+{
+ 	"month":"OCT",
+	"meterData":
+	{
+  	"meterId":"002"
+	},
+	"reading":"20"
+},
+{
+ 	"month":"NOV",
+	"meterData":
+	{
+  	"meterId":"002"
+	},
+	"reading":"20"
+},
+{
+ 	"month":"DEC",
+	"meterData":
+	{
+  	"meterId":"002"
+	},
+	"reading":"20"
+}
+]
+
