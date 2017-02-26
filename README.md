@@ -30,7 +30,7 @@ POST http://localhost:8090/api/meterreading/createMeterReading
  Meter and Profile Data will be inserted before processing Fraction and Meter Readings.
  data.sql file will load initial Meter and Profile in Table. There is a rest endpont to create MeterData
  
- #TODO:
+ ##TODO
    Although Rest end points for all the CRUD operation has been implemented. Below are the TODO List
     1.Test Update, Delete and Read operation for MeterReadings.
 	2.Test Update, Delete and Read operation for MeterReadings.
