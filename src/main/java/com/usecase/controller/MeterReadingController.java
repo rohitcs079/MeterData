@@ -28,7 +28,7 @@ import com.usecase.validator.MeterDataValidator;
  */
 
 @RestController
-@RequestMapping("/api/meterreading")
+@RequestMapping("/meterreading")
 @Log4j
 public class MeterReadingController {
 

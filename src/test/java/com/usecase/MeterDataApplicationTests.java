@@ -1,4 +1,4 @@
-package com.usecase;
+/*package com.usecase;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,3 +17,4 @@ public class MeterDataApplicationTests {
 	}
 
 }
+*/

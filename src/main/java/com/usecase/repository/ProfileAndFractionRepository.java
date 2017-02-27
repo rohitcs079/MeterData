@@ -2,8 +2,8 @@ package com.usecase.repository;
 
 import java.util.List;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
 import com.usecase.domain.ProfileAndFraction;
@@ -14,7 +14,7 @@ import com.usecase.domain.ProfileAndFraction;
  * Created by ROHIT on 26-02-2017.
  *
  */
-public interface ProfileAndFractionRepository extends CrudRepository<ProfileAndFraction,Long> {
+public interface ProfileAndFractionRepository extends JpaRepository<ProfileAndFraction,Long> {
 	
 	/**
 	 * Returns ProfileAndFraction info for a given profile

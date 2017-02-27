@@ -33,7 +33,7 @@ import com.usecase.validator.FractionDataValidator;
 
 
 @RestController
-@RequestMapping("/api/fractions")
+@RequestMapping("/fractions")
 @Log4j
 public class ProfileAndFractionController {
 	

@@ -5,6 +5,8 @@ import java.util.List;
 
 import com.usecase.domain.MeterReading;
 
+import org.springframework.data.jpa.mapping.JpaPersistentProperty;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
@@ -13,7 +15,7 @@ import org.springframework.data.repository.query.Param;
  * Created by ROHIT on 26-02-2017.
  */
 
-public interface MeterReadingRepository extends CrudRepository<MeterReading,Long> {
+public interface MeterReadingRepository extends JpaRepository<MeterReading,Long> {
 	
 	/**
 	 * Get MeterReading for a meter
