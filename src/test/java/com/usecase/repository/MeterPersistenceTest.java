@@ -12,11 +12,12 @@ import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
+import com.usecase.MeterDataApplicationTests;
 import com.usecase.domain.Meter;
 
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
+@SpringBootTest(classes = MeterDataApplicationTests.class)
 @DataJpaTest
 public class MeterPersistenceTest  {
 	
@@ -31,12 +32,12 @@ public class MeterPersistenceTest  {
 	public void findByMeterIdShouldReturnMeter()
 	{
 		Meter meter = new Meter();
-		meter.setMeterId("001");
-		meter.setProfile("ABC");
+		meter.setMeterId("0012");
+		meter.setProfile("ABCD");
 		this.entityManager.persist(meter);
 		
-		meter = this.meterRepository.findByMeterId("001");
-		assertThat(meter.getMeterId()).isEqualTo("001");
+		meter = this.meterRepository.findByMeterId("0012");
+		assertThat(meter.getMeterId()).isEqualTo("0012");
 	}
 	
 	

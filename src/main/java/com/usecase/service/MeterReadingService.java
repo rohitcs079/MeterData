@@ -27,7 +27,7 @@ public interface MeterReadingService {
 	 * Deletes given meterReading
 	 * @param meterReading
 	 */
-	public void deleteMeterReading(MeterReading meterReading);
+	public void deleteMeterReading(Long id);
 	
 	/**
 	 * Get MeterReading from id

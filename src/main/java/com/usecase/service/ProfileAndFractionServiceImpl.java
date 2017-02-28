@@ -36,10 +36,10 @@ public class ProfileAndFractionServiceImpl implements ProfileAndFractionService 
 
 
 	@Override
-	public void deleteProfileAndFraction(List<ProfileAndFraction> deleteList) {
+	public void deleteProfileAndFraction(Long id) {
 		
 		
-		profileAndFractionRepository.delete(deleteList);
+		profileAndFractionRepository.delete(id);
 	}
 
 
@@ -54,7 +54,7 @@ public class ProfileAndFractionServiceImpl implements ProfileAndFractionService 
 
 	@Override
 	public List<ProfileAndFraction> getFractionDetail(Meter meter) {
-		List<ProfileAndFraction> profileAndFrationList=profileAndFractionRepository.findByMeterId(meter.getId());
+		List<ProfileAndFraction> profileAndFrationList=profileAndFractionRepository.findByMeter(meter.getId());
 		return profileAndFrationList;
 	}
 

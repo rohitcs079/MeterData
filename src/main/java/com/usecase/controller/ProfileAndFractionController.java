@@ -68,32 +68,20 @@ public class ProfileAndFractionController {
 	 * @return
 	 */
 	
-	@RequestMapping(value="/deleteProfileAndFraction", method = RequestMethod.DELETE)
-	public ResponseEntity<?> deleteProfileAndFraction(@RequestBody List<ProfileAndFraction> profileAndFractionList)
+	@RequestMapping(value="/deleteProfileAndFraction/{id}", method = RequestMethod.DELETE)
+	public ResponseEntity<?> deleteProfileAndFraction(@PathVariable Long id)
 	{
 		
-		profileAndFractionService.deleteProfileAndFraction(profileAndFractionList);
+		profileAndFractionService.deleteProfileAndFraction(id);
 	
-		return new ResponseEntity<List<ProfileAndFraction>>(HttpStatus.NO_CONTENT);
+		return new ResponseEntity<List<ProfileAndFraction>>(HttpStatus.ACCEPTED);
 	
 	}
 	 // ------------------- Update All profileAndFraction ------------------------------------------------
 	 
-    @RequestMapping(value = "/updateMeterReading", method = RequestMethod.POST)
+    @RequestMapping(value = "/updateMeterReading", method = RequestMethod.PUT)
     public ResponseEntity<?> updateMeterReading(@RequestBody List<ProfileAndFractionData> profileAndFractionList) {
-       /* log.info("Updating User with id {}" +id);
- 
-        MeterReading currentMeterReading = profileAndFractionService.findByMeterReadingId(id);
- 
-        if (currentMeterReading == null) {
-        	log.error("Unable to update. MeterReading  with id {} not found."+ id);
-            return new ResponseEntity<CustomErrorMessage>(new CustomErrorMessage("Unable to upate. MeterReading with id " + id + " not found."),
-                    HttpStatus.NOT_FOUND);
-        }
- 
-        currentMeterReading.setReading(meterReading.getReading());
-        currentMeterReading.setReadingDate(meterReading.getReadingDate());
-        currentMeterReading.setMeter(meterReading.getMeter());*/
+       
  
     	profileAndFractionList=fractionvalidator.validate(profileAndFractionList);
     	profileAndFractionService.updateProfileAndFraction(profileAndFractionList);

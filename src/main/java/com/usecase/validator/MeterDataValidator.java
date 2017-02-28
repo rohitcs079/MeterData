@@ -68,6 +68,7 @@ public class MeterDataValidator  {
 			Meter meter = meterRepository.findByMeterId(meterReadingData.getMeterData().getMeterId());
 			if(meter!=null)
 			{
+				//Add only Meter Reading for which Meter profile exists validation
 				validMeterReadingDatas.add(meterReadingData);
 			}
 		}
@@ -80,7 +81,7 @@ public class MeterDataValidator  {
 		for(String key:meterReadingMap.keySet())
 		{
 			Meter meter=meterRepository.findByMeterId(meterReadingMap.get(key).get(0).getMeterData().getMeterId());
-			List<ProfileAndFraction> frationList=fractionRepository.findByMeterId(meter.getId());
+			List<ProfileAndFraction> frationList=fractionRepository.findByMeter(meter.getId());
 			if(frationList!=null && !frationList.isEmpty())
 			{
 				List<ProfileAndFractionData> fractionDataList=meterDataTranslator.populateFractionDataToModel(frationList);

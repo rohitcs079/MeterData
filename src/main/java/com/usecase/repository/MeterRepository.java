@@ -18,7 +18,7 @@ public interface MeterRepository extends JpaRepository<Meter,Long>
 	 * @param meterId
 	 * @return Meter
 	 */
-	 @Query("SELECT p FROM Meter p WHERE p.meterId = :meterId")
+	 
 	public Meter findByMeterId(@Param(value = "meterId") String meterId);
 
 }

@@ -17,10 +17,10 @@ public interface ProfileAndFractionService {
 	
 	/**
 	 * Delete Fraction 
-	 * @param deleteList
+	 * @param id
 	 */
 	
-	public void deleteProfileAndFraction(List<ProfileAndFraction> deleteList);
+	public void deleteProfileAndFraction(Long id);
 	
 	/**
 	 * Update Fraction Data

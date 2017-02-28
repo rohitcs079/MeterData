@@ -2,6 +2,8 @@ package com.usecase.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
+
 import lombok.extern.log4j.Log4j;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -68,6 +70,14 @@ public class MeterReadingController {
 			@RequestBody List<MeterReadingData> meterReadingDataList) {
 		meterReadingDataList = meterReadingValidator
 				.validateCreateMeterReading(meterReadingDataList);
+		
+		if(meterReadingDataList.isEmpty() == true)
+		{
+			return new ResponseEntity<CustomErrorMessage>(
+					new CustomErrorMessage("Profile not found for Meter Readings"),
+					HttpStatus.NOT_ACCEPTABLE);
+
+		}
 		List<MeterReading> meterReadingList = meterReadingService
 				.createMeterReading(meterReadingDataList);
 		if (meterReadingList.isEmpty() == true) {
@@ -88,13 +98,13 @@ public class MeterReadingController {
 	 * @return
 	 */
 
-	@RequestMapping(value = "/deleteMeterReading", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/deleteMeterReading/{id}", method = RequestMethod.DELETE)
 	public ResponseEntity<?> deleteMeterReading(
-			@RequestBody MeterReading meterReading) {
+			@PathVariable Long id) {
 
-		meterReadingService.deleteMeterReading(meterReading);
+		meterReadingService.deleteMeterReading(id);
 
-		return new ResponseEntity<MeterReading>(HttpStatus.NO_CONTENT);
+		return new ResponseEntity<MeterReading>(HttpStatus.ACCEPTED);
 
 	}
 
@@ -151,13 +161,14 @@ public class MeterReadingController {
 	// Meter------------------------------------------
 
 	@RequestMapping(value = "/getConsumtionForMeter", method = RequestMethod.POST)
-	public List<MeterReading> getConsumptionForMeter(@RequestBody Meter meter) {
+	public List<MeterReading> getConsumptionForMeter(HttpServletResponse response, @RequestBody Meter meter) {
 		log.info("Fetching Consumption  for Meter and Date");
 		List<MeterReading> meterReadingList = meterReadingService
 				.getConsumptionDetail(meter);
 		if (meterReadingList == null) {
 			log.error("Consumption detail not found for Given meter and date"
 					+ meter.getMeterId());
+		
 			/*
 			 * return new ResponseEntity<MeterReading>(new
 			 * CustomErrorMessage("Consumption for meter " + meter.getMeterId()
