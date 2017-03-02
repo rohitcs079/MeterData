@@ -64,6 +64,9 @@ public class ProfileAndFractionPersistenceTest {
 			
 			List<ProfileAndFraction>profileAndFractions = this.repository.findByMeter(meter.getId());
 			assertThat(profileAndFractions.size()).isEqualTo(2);
+			
+			List<ProfileAndFraction>profileAndFractions2 = this.repository.findByMeterProfile(meter.getProfile());
+			assertThat(profileAndFractions2.size()).isEqualTo(2);
 		}
 		
 

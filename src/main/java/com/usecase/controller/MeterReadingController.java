@@ -21,6 +21,7 @@ import com.usecase.model.MeterData;
 import com.usecase.model.MeterReadingData;
 import com.usecase.service.MeterReadingService;
 import com.usecase.utility.CustomErrorMessage;
+import com.usecase.utility.MeterReadingValidationUtil;
 import com.usecase.validator.MeterDataValidator;
 
 /**
@@ -68,18 +69,21 @@ public class MeterReadingController {
 	@RequestMapping(value = "/createMeterReading", method = RequestMethod.POST)
 	public ResponseEntity<?> createMeterReading(
 			@RequestBody List<MeterReadingData> meterReadingDataList) {
-		meterReadingDataList = meterReadingValidator
+		
+		
+		MeterReadingValidationUtil meterReadingValidationUtil = meterReadingValidator
 				.validateCreateMeterReading(meterReadingDataList);
 		
-		if(meterReadingDataList.isEmpty() == true)
+		List<MeterReadingData> validMeterReadingDatas = meterReadingValidationUtil.getValidMeterReadings();
+		
+		if(validMeterReadingDatas.isEmpty() == true)
 		{
-			return new ResponseEntity<CustomErrorMessage>(
-					new CustomErrorMessage("Profile not found for Meter Readings"),
-					HttpStatus.NOT_ACCEPTABLE);
+			return new ResponseEntity<List<CustomErrorMessage>>(meterReadingValidationUtil.getValidationError()
+					,HttpStatus.NOT_ACCEPTABLE);
 
 		}
 		List<MeterReading> meterReadingList = meterReadingService
-				.createMeterReading(meterReadingDataList);
+				.createMeterReading(validMeterReadingDatas);
 		if (meterReadingList.isEmpty() == true) {
 			return new ResponseEntity<CustomErrorMessage>(
 					new CustomErrorMessage("Unable to insert MeterReading"),
@@ -90,6 +94,42 @@ public class MeterReadingController {
 				HttpStatus.ACCEPTED);
 
 	}
+	
+	/**
+	 * Creates Meter Reading for meter for different profiles
+	 * 
+	 * @param meterReadingDataList
+	 * @return
+	 */
+	@RequestMapping(value = "/updateMeterReading", method = RequestMethod.POST)
+	public ResponseEntity<?> updateMeterReading(
+			@RequestBody List<MeterReadingData> meterReadingDataList) {
+		
+		
+		MeterReadingValidationUtil meterReadingValidationUtil = meterReadingValidator
+				.validateCreateMeterReading(meterReadingDataList);
+		
+		List<MeterReadingData> validMeterReadingDatas = meterReadingValidationUtil.getValidMeterReadings();
+		
+		if(validMeterReadingDatas.isEmpty() == true)
+		{
+			return new ResponseEntity<List<CustomErrorMessage>>(meterReadingValidationUtil.getValidationError()
+					,HttpStatus.NOT_ACCEPTABLE);
+
+		}
+		List<MeterReading> meterReadingList = meterReadingService
+				.createMeterReading(validMeterReadingDatas);
+		if (meterReadingList.isEmpty() == true) {
+			return new ResponseEntity<CustomErrorMessage>(
+					new CustomErrorMessage("Unable to insert MeterReading"),
+					HttpStatus.NOT_ACCEPTABLE);
+
+		}
+		return new ResponseEntity<String>("SuccessFully Inserted",
+				HttpStatus.ACCEPTED);
+
+	}
+
 
 	/**
 	 * Method Deletes a MeterReading
@@ -108,7 +148,9 @@ public class MeterReadingController {
 
 	}
 
-	// ------------------- Update a MeterReading
+	
+	
+	/*// ------------------- Update a MeterReading
 	// ------------------------------------------------
 
 	@RequestMapping(value = "/updateMeterReading/{id}", method = RequestMethod.PUT)
@@ -137,7 +179,7 @@ public class MeterReadingController {
 				HttpStatus.OK);
 
 	}
-
+*/
 	// -------------------Retrieve Consumtion for given Date and
 	// Meter------------------------------------------
 

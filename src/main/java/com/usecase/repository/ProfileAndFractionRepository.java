@@ -23,5 +23,9 @@ public interface ProfileAndFractionRepository extends JpaRepository<ProfileAndFr
 	 */
 	 @Query("SELECT p FROM ProfileAndFraction p WHERE p.profile.id = :id")
 	public List<ProfileAndFraction> findByMeter(@Param(value = "id") Long id);
+	 
+	 @Query("SELECT p FROM ProfileAndFraction p WHERE p.profile.profile = :profile")
+		public List<ProfileAndFraction> findByMeterProfile(@Param(value = "profile") String profile);
+
 
 }

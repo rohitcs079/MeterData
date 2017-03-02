@@ -60,13 +60,19 @@ public class MeterDataTranslator {
 		for (MeterReadingData meterReadingData : meterReadingDataList) {
 			Meter meter = meterRepository.findByMeterId(meterReadingData
 					.getMeterData().getMeterId());
+			if(meter != null)
+			{
 			String calendarMonth = meterReadingData.getMonth();
 			MeterReading meterReading = new MeterReading();
+			// 
+			meterReading.setId(meterReadingData.getId());
+			
 			meterReading.setMeter(meter);
 			meterReading.setReadingDate(MeterDataDateUtil
 					.convertMonthToDate(calendarMonth));
 			meterReading.setReading(meterReadingData.getReading());
 			meterReadingList.add(meterReading);
+			}
 
 		}
 		return meterReadingList;
