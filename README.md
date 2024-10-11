@@ -4,6 +4,7 @@ UseCase for Meter Readings and Consumption
 
 #Latest changes 
 
+#Latest change 2
 #DataBase
 
 Application uses h2DataBase. To view the database contents use below console
